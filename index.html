@@ -1,18 +1,87 @@
-<!doctype html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210027068-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-210027068-1');
+  </script>
+
   <meta charset="utf-8">
   <meta name="description" content="An interactive tutorial on electric motors.">
   <title>Electromotors Interactive Guide</title>
-  
-  <!-- Other existing styles and scripts -->
-  
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black; /* Set background to black */
+      color: white; /* Set text color to white for contrast */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh; /* Full height */
+      text-align: center; /* Center text alignment */
+      font-family: Arial, sans-serif; /* Modern font style */
+    }
+
+    h1 {
+      margin-bottom: 20px; /* Space below the title */
+      font-size: 2.5rem; /* Increase title size */
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Shadow effect for title */
+    }
+
+    #main-image {
+      max-width: 90%; /* Responsive image */
+      height: auto;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect for image */
+      margin-bottom: 30px; /* Spacing below the image */
+    }
+
+    /* Add an icon class for the smaller icon */
+    #icon {
+      width: 100px; /* Set width for the icon */
+      height: auto; /* Keep aspect ratio */
+      margin-bottom: 20px; /* Space below the icon */
+    }
+
+    .button {
+      padding: 15px 30px;
+      background-color: #4CAF50; /* Green background */
+      color: white; /* White text */
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s; /* Smooth transition */
+      margin: 10px; /* Space between buttons */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Button shadow */
+    }
+
+    .button:hover {
+      background-color: #45a049; /* Darker green on hover */
+    }
+  </style>
+
+  <link rel="icon" href="electomotors1.png">
+  <link rel="shortcut icon" href="electomotors1.png">
 </head>
 
 <body>
+  <!-- Add a smaller icon above the title -->
+  <img id="icon" src="electomotors1.png" alt="Electromotors Icon">
+  
   <h1>Welcome to the Electromotors Guide</h1>
   <img id="main-image" src="electomotors1.png" alt="Electromotors">
-  
+
   <!-- Start Button -->
   <button class="button" onclick="startGame()">START</button>
 
