@@ -1,1 +1,112 @@
+# Electric Machines
+
+This document provides an overview of continuous-time electric machine models, including induction machines and synchronous machines.
+
+## Induction Machine
+
+Induction machine models are available in the `motulator.drive.model` package. These models are implemented in stator coordinates, using a Γ-equivalent model as the base. This approach allows for straightforward extension with magnetic saturation models [#Sle1989]_.
+
+### Γ Model
+
+![Gamma Model](../figs/im_gamma.svg)
+*Gamma-model of an induction machine*
+
+### Block Diagram
+
+![Block Diagram](../figs/im_block.svg)
+*Block diagram of the induction machine model.*
+
+#### Voltage Equations
+
+The voltage equations for the induction machine are:
+
+$$
+\begin{align*}
+\frac{\mathrm{d}\boldsymbol{\psi}_\mathrm{s}^\mathrm{s}}{\mathrm{d} t} &= \boldsymbol{u}_\mathrm{s}^\mathrm{s} - R_\mathrm{s}\boldsymbol{i}_\mathrm{s}^\mathrm{s} \\
+\frac{\mathrm{d}\boldsymbol{\psi}_\mathrm{r}^\mathrm{s}}{\mathrm{d} t} &= -R_\mathrm{r}\boldsymbol{i}_\mathrm{r}^\mathrm{s} + \mathrm{j}\omega_\mathrm{m}\boldsymbol{\psi}_\mathrm{r}^\mathrm{s}
+\end{align*}
+$$
+
+Where:
+- $\boldsymbol{u}_\mathrm{s}^\mathrm{s}$: Stator voltage
+- $\boldsymbol{i}_\mathrm{s}^\mathrm{s}$: Stator current
+- $\boldsymbol{i}_\mathrm{r}^\mathrm{s}$: Rotor current
+- $R_\mathrm{s}$: Stator resistance
+- $R_\mathrm{r}$: Rotor resistance
+- $\omega_\mathrm{m}$: Electrical angular speed of the rotor
+
+The stator and rotor flux linkages are defined as follows:
+
+$$
+\begin{align*}
+\boldsymbol{\psi}_\mathrm{s}^\mathrm{s} &= L_\mathrm{s}(\boldsymbol{i}_\mathrm{s}^\mathrm{s} + \boldsymbol{i}_\mathrm{r}^\mathrm{s}) \\
+\boldsymbol{\psi}_\mathrm{r}^\mathrm{s} &= \boldsymbol{\psi}_\mathrm{s}^\mathrm{s} + L_\ell\boldsymbol{i}_\mathrm{r}^\mathrm{s}
+\end{align*}
+$$
+
+Where:
+- $L_\mathrm{s}$: Stator inductance
+- $L_\ell$: Leakage inductance
+
+The electromagnetic torque is calculated using:
+
+$$
+\tau_\mathrm{M} = \frac{3 n_\mathrm{p}}{2}\mathrm{Im} \left\{\boldsymbol{i}_\mathrm{s}^\mathrm{s} (\boldsymbol{\psi}_\mathrm{s}^\mathrm{s})^* \right\}
+$$
+
+The class `motulator.drive.model.InductionMachine` implements this linear magnetic model. It also supports main-flux saturation models, such as $L_\mathrm{s} = L_\mathrm{s}(\psi_\mathrm{s})$ [#Qu2012]_.
+
+> **Note**: If magnetic saturation is not included, the Γ model is mathematically equivalent to the inverse-Γ and T models.
+
+![Inverse Gamma Model](../figs/im_inv_gamma.svg)
+*Inverse-Γ model of an induction machine*
+
+Control methods based on the inverse-Γ model can be found in the `motulator.drive.control.im` package.
+
+## Synchronous Machine
+
+Synchronous machine models are also available in the `motulator.drive.model` package. These models can be parametrized for permanent-magnet synchronous machines (PMSMs) and synchronous reluctance machines (SyRMs).
+
+### Block Diagram
+
+![Synchronous Machine Model](../figs/sm_block_rot.svg)
+*Block diagram of the synchronous machine model in rotor coordinates.*
+
+#### Voltage Equation
+
+The voltage equation in rotor coordinates is given by:
+
+$$
+\frac{\mathrm{d}\boldsymbol{\psi}_\mathrm{s}}{\mathrm{d} t} = \boldsymbol{u}_\mathrm{s} - R_\mathrm{s}\boldsymbol{i}_\mathrm{s} - \mathrm{j}\omega_\mathrm{m}\boldsymbol{\psi}_\mathrm{s}
+$$
+
+Where:
+- $\boldsymbol{u}_\mathrm{s}$: Stator voltage
+- $\boldsymbol{i}_\mathrm{s}$: Stator current
+
+For the magnetically linear case, the stator flux linkage is:
+
+$$
+\boldsymbol{\psi}_\mathrm{s} = L_\mathrm{d}\mathrm{Re}\{\boldsymbol{i}_\mathrm{s}\} + \mathrm{j}L_\mathrm{q}\mathrm{Im}\{\boldsymbol{i}_\mathrm{s}\} + \psi_\mathrm{f}
+$$
+
+Where:
+- $L_\mathrm{d}$: d-axis inductance
+- $L_\mathrm{q}$: q-axis inductance
+- $\psi_\mathrm{f}$: Permanent-magnet flux linkage
+
+The electromagnetic torque is given by:
+
+$$
+\tau_\mathrm{M} = \frac{3 n_\mathrm{p}}{2}\mathrm{Im} \left\{\boldsymbol{i}_\mathrm{s} \boldsymbol{\psi}_\mathrm{s}^* \right\}
+$$
+
+The model can also accommodate nonlinear saturation characteristics in the form of flux maps or explicit functions [#Hin2017]_. 
+
+### References
+
+1. Slemon, "Modelling of induction machines for electric drives," IEEE Trans. Ind. Appl., 1989, [https://doi.org/10.1109/28.44251](https://doi.org/10.1109/28.44251).
+2. Qu, Ranta, Hinkkanen, Luomi, "Loss-minimizing flux level control of induction motor drives," IEEE Trans. Ind. Appl., 2012, [https://doi.org/10.1109/TIA.2012.2190818](https://doi.org/10.1109/TIA.2012.2190818).
+3. Jahns, Kliman, Neumann, “Interior permanent-magnet synchronous motors for adjustable-speed drives,” IEEE Trans. Ind. Appl., 1986, [https://doi.org/10.1109/TIA.1986.4504786](https://doi.org/10.1109/TIA.1986.4504786).
+4. Hinkkanen, Pescetto, Mölsä, Saarakkala, Pellegrino, Bojoi, “Sensorless self-commissioning of synchronous reluctance motors at standstill without rotor locking,” IEEE Trans. Ind. Appl., 2017, [https://doi.org/10.1109/TIA.2016.2644624](https://doi.org/10.1109/TIA.2016.2644624).
 
