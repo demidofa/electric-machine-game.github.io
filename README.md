@@ -39,25 +39,25 @@ The following notebooks demonstrate various control methods for a 2.2-kW Permane
 
 The following notebooks detail control techniques for a 2.2-kW Induction Motor (IM):
 
-1. **[Current-Vector Control of a 2.2-kW Induction Motor Drive](induction_model/2_2_kW_induction_motor_current_vector_control.ipynb)**  
+1. **[Current-Vector Control of a 2.2-kW Induction Motor Drive](im/2_2_kW_induction_motor_current_vector_control.ipynb)**  
    Explores current-vector control for torque regulation.
 
-2. **[Sensorless Current-Vector Control with Magnetic Saturation](induction_model/2_2_kW_induction_motor_current_vector_control_magnetic_saturation.ipynb)**  
+2. **[Sensorless Current-Vector Control with Magnetic Saturation](im/2_2_kW_induction_motor_current_vector_control_magnetic_saturation.ipynb)**  
    Incorporates machine magnetic saturation into the current-vector control model.
 
-3. **[V/Hz Control with Six-Step Overmodulation](induction_model/2_2_kW_induction_motor_V_Hz_control_6_step_mode.ipynb)**  
+3. **[V/Hz Control with Six-Step Overmodulation](im/2_2_kW_induction_motor_V_Hz_control_6_step_mode.ipynb)**  
    Demonstrates V/Hz control with six-step overmodulation enabled.
 
-4. **[V/Hz Control with Diode Bridge Rectifier](induction_model/2_2_kW_induction_motor_diode_V_Hz_control_bridge.ipynb)**  
+4. **[V/Hz Control with Diode Bridge Rectifier](im/2_2_kW_induction_motor_diode_V_Hz_control_bridge.ipynb)**  
    Includes diode bridge rectifier in the V/Hz control scheme.
 
-5. **[V/Hz Control with LC Filter](induction_model/2_2_kW_induction_motor_V_Hz_control_LC_filter.ipynb)**  
+5. **[V/Hz Control with LC Filter](im/2_2_kW_induction_motor_V_Hz_control_LC_filter.ipynb)**  
    Adds an LC filter to the V/Hz control for smoothing the output.
 
-6. **[Observer-Based V/Hz Control](induction_model/2_2_kW_induction_motor_observer_based_V_Hz_control_.ipynb)**  
+6. **[Observer-Based V/Hz Control](im/2_2_kW_induction_motor_observer_based_V_Hz_control_.ipynb)**  
    Utilizes observer-based feedback in the V/Hz control of the induction motor.
 
-7. **[Sensorless Flux-Vector Control](induction_model/2_2_kW_induction_motor__sensorless_flux_vector_control.ipynb)**  
+7. **[Sensorless Flux-Vector Control](im/2_2_kW_induction_motor__sensorless_flux_vector_control.ipynb)**  
    Sensorless flux-vector control for efficient torque production in induction motors.
 
 ---
