@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Choose an electric motor type.">
+  <title>Choose Motor Type</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black; /* Set background to black */
+      color: white; /* Set text color to white for contrast */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh; /* Full height */
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .button {
+      padding: 20px 40px;
+      background-color: #4CAF50; /* Green background */
+      color: white; /* White text */
+      border: none;
+      border-radius: 5px;
+      font-size: 24px; /* Larger font size for buttons */
+      cursor: pointer;
+      transition: background-color 0.3s; /* Smooth transition */
+      margin: 10px; /* Space between buttons */
+    }
+
+    .button:hover {
+      background-color: #45a049; /* Darker green on hover */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Select an Electric Motor Type</h1>
+
+  <!-- Motor Type Buttons -->
+  <button class="button" onclick="alert('You selected Permanent Synchronous Motor')">Permanent Synchronous Motor</button>
+  <button class="button" onclick="alert('You selected Synchronous Reluctance Motor')">Synchronous Reluctance Motor</button>
+  <button class="button" onclick="alert('You selected Induction Motor')">Induction Motor</button>
+</body>
+</html>
