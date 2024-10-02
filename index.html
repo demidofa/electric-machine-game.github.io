@@ -10,7 +10,7 @@
     gtag('config', 'UA-210027068-1');
   </script>
 
-  <meta charset="utf-10">
+  <meta charset="utf-8">
   <meta name="description" content="An interactive tutorial on electric motors.">
   <title>Electromotors Interactive Guide</title>
 
@@ -29,12 +29,22 @@
       align-items: center;
       flex-direction: column;
       height: 100vh; /* Full height */
+      text-align: center; /* Center text alignment */
+      font-family: Arial, sans-serif; /* Modern font style */
+    }
+
+    h1 {
+      margin-bottom: 20px; /* Space below the title */
+      font-size: 2.5rem; /* Increase title size */
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Shadow effect for title */
     }
 
     #main-image {
-      max-width: 80%; /* Responsive image */
+      max-width: 90%; /* Responsive image */
       height: auto;
-      margin-bottom: 20px; /* Spacing below the image */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect for image */
+      margin-bottom: 30px; /* Spacing below the image */
     }
 
     .button {
@@ -47,6 +57,7 @@
       cursor: pointer;
       transition: background-color 0.3s; /* Smooth transition */
       margin: 10px; /* Space between buttons */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Button shadow */
     }
 
     .button:hover {
