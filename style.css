@@ -1,7 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #87CEEB; /* Light sky-blue background */
+    background: linear-gradient(to top, #87CEEB, #ffffff); /* Light gradient for a sky effect */
     margin: 0;
     padding: 0;
 }
@@ -10,6 +10,7 @@ header {
     background-color: #4CAF50;
     color: white;
     padding: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for header */
 }
 
 h1 {
@@ -23,8 +24,8 @@ section#game {
     padding: 40px;
     width: 90%;
     background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Strong shadow for a floating effect */
+    border-radius: 30px; /* More rounded corners */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Light shadow */
 }
 
 #scenario {
@@ -42,16 +43,16 @@ section#game {
 }
 
 .motorBtn {
-    padding: 20px;
-    font-size: 18px;
+    padding: 30px;
+    font-size: 20px;
     cursor: pointer;
-    background-color: white;
+    background: radial-gradient(circle, #ffffff, #f0f0f0); /* Soft gradient for cloud-like appearance */
     border: none;
-    border-radius: 20px; /* Rounded corners for the "cloud" effect */
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15); /* Shadow to give floating feel */
+    border-radius: 50%; /* Fully rounded shape for modern look */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for floating effect */
     transition: all 0.3s ease-in-out;
-    width: 200px;
-    height: 100px;
+    width: 160px; /* Set width for cloud shape */
+    height: 160px; /* Set height for cloud shape */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,9 +62,9 @@ section#game {
 }
 
 .motorBtn:hover {
-    background-color: #f0f0f0;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3); /* Lifted shadow on hover */
-    transform: translateY(-10px); /* Lifting effect on hover */
+    background: radial-gradient(circle, #f0f0f0, #e0e0e0); /* Change gradient on hover */
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
 }
 
 footer {
