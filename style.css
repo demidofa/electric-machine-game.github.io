@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -26,24 +28,38 @@ section#game {
 
 #scenario {
     margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #333;
 }
 
 #motorOptions {
+    display: flex;
+    justify-content: space-around;
     margin: 20px 0;
+    flex-wrap: wrap;  /* Allows buttons to wrap if the screen is smaller */
 }
 
 .motorBtn {
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 20px 40px;
+    margin: 10px;
     font-size: 16px;
     cursor: pointer;
     background-color: #f0f0f0;
-    border: 2px solid #ddd;
-    border-radius: 5px;
+    border: none;
+    border-radius: 50%; /* Creates a rounded, cloud-like shape */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Cloud shadow effect */
+    transition: all 0.3s ease-in-out;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .motorBtn:hover {
-    background-color: #ddd;
+    background-color: #e0e0e0;
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Hover effect */
+    transform: translateY(-5px); /* Hover lift effect */
 }
 
 footer {
