@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background: linear-gradient(to top, #87CEEB, #ffffff); /* Light gradient for a sky effect */
+    background: linear-gradient(to top, #87CEEB, #ffffff); /* Sky gradient */
     margin: 0;
     padding: 0;
 }
@@ -24,7 +24,7 @@ section#game {
     padding: 40px;
     width: 90%;
     background-color: #ffffff;
-    border-radius: 30px; /* More rounded corners */
+    border-radius: 30px; /* Rounded corners for game section */
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Light shadow */
 }
 
@@ -43,26 +43,27 @@ section#game {
 }
 
 .motorBtn {
-    padding: 30px;
+    padding: 20px;
     font-size: 20px;
     cursor: pointer;
-    background: radial-gradient(circle, #ffffff, #f0f0f0); /* Soft gradient for cloud-like appearance */
+    background: #ffffff; /* White background for button */
     border: none;
-    border-radius: 50%; /* Fully rounded shape for modern look */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for floating effect */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
     transition: all 0.3s ease-in-out;
-    width: 160px; /* Set width for cloud shape */
-    height: 160px; /* Set height for cloud shape */
+    width: 180px; /* Width for button */
+    height: 100px; /* Height for button */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-weight: bold;
     color: #333;
+    clip-path: polygon(30% 0%, 100% 0%, 100% 30%, 80% 60%, 100% 100%, 0% 100%, 0% 30%, 20% 60%); /* Cloud shape */
 }
 
 .motorBtn:hover {
-    background: radial-gradient(circle, #f0f0f0, #e0e0e0); /* Change gradient on hover */
+    background: #f0f0f0; /* Light gray background on hover */
     box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
     transform: translateY(-5px); /* Lift effect on hover */
 }
