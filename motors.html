@@ -3,16 +3,27 @@
 <head>
   <meta charset="utf-8">
   <title>Motor Selection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: black;
-      color: white;
+      background-color: #121212;
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+      color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      height: 100vh;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
       text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      color: #4CAF50;
+      text-transform: uppercase;
     }
     .button {
       padding: 15px 30px;
@@ -20,13 +31,18 @@
       color: white;
       border: none;
       border-radius: 5px;
-      font-size: 20px;
+      font-size: 1.5rem;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: all 0.3s ease;
       margin: 10px;
+      text-transform: uppercase;
     }
     .button:hover {
       background-color: #45a049;
+      transform: scale(1.05);
+    }
+    .button:active {
+      transform: scale(0.98);
     }
   </style>
 </head>
