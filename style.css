@@ -4,6 +4,10 @@ body {
     background: linear-gradient(to top, #87CEEB, #ffffff); /* Sky gradient */
     margin: 0;
     padding: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
 }
 
 header {
@@ -20,9 +24,10 @@ h1 {
 }
 
 section#game {
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 40px;
     width: 90%;
+    max-width: 800px; /* Limit maximum width for better readability */
     background-color: #ffffff;
     border-radius: 30px; /* Rounded corners for game section */
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Light shadow */
@@ -37,7 +42,7 @@ section#game {
 
 #motorOptions {
     display: flex;
-    justify-content: space-evenly; /* Evenly distribute the buttons */
+    justify-content: space-around; /* Evenly distribute buttons across the section */
     flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
     gap: 20px;
 }
