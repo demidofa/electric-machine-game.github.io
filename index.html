@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Electrical Machine Selection Game</title>
-  <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Master: Choose Your Machine</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Select Your Motor</h1>
-  <canvas id="gameCanvas"></canvas> <!-- For rendering motor animations -->
-  <button id="motor1">Select Motor 1</button>
-  <button id="motor2">Select Motor 2</button>
-  <script src="app.js"></script> <!-- External JavaScript file -->
+    <header>
+        <h1>Motor Master: Choose Your Machine!</h1>
+    </header>
+
+    <section id="game">
+        <div id="scenario">
+            <h2 id="scenarioTitle">Scenario:</h2>
+            <p id="scenarioDescription">Select the best motor for this scenario.</p>
+        </div>
+
+        <div id="motorOptions">
+            <h3>Choose a Motor:</h3>
+            <button class="motorBtn" onclick="chooseMotor('DC')">DC Motor</button>
+            <button class="motorBtn" onclick="chooseMotor('Induction')">Induction Motor</button>
+            <button class="motorBtn" onclick="chooseMotor('Synchronous')">Synchronous Motor</button>
+            <button class="motorBtn" onclick="chooseMotor('BrushlessDC')">Brushless DC Motor</button>
+            <button class="motorBtn" onclick="chooseMotor('SwitchedReluctance')">Switched Reluctance Motor</button>
+        </div>
+
+        <div id="result"></div>
+    </section>
+
+    <footer>
+        <p>© 2024 Motor Master Game</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
