@@ -34,13 +34,13 @@
   <h1>Select a Motor Type</h1>
   
   <!-- Buttons to select motor types -->
-  <button class="button" onclick="openNotebook('https://github.com/demidofa/electric-machine-game.github.io/blob/main/plot_vector_ctrl_pmsm_2kw.ipynb')">Permanent Synchronous Motor</button>
-  <button class="button" onclick="openNotebook('https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/synchronous_reluctance_motor.html')">Synchronous Reluctance Motor</button>
-  <button class="button" onclick="openNotebook('https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/induction_motor.html')">Induction Motor</button>
+  <button class="button" onclick="openMotor('pmsm.html')">Permanent Synchronous Motor</button>
+  <button class="button" onclick="openMotor('reluctance_motor.html')">Synchronous Reluctance Motor</button>
+  <button class="button" onclick="openMotor('induction_motor.html')">Induction Motor</button>
 
   <script>
-    function openNotebook(notebook) {
-      window.location.href = notebook; // Navigate to the selected notebook
+    function openMotor(motor) {
+      window.location.href = motor; // Navigate to the selected motor page
     }
   </script>
 </body>
