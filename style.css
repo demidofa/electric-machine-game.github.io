@@ -1,17 +1,60 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
 }
 
-#gameCanvas {
-  border: 2px solid black;
-  margin: 20px;
-  background-color: white;
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
 }
 
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 16px;
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+section#game {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#scenario {
+    margin-bottom: 20px;
+}
+
+#motorOptions {
+    margin: 20px 0;
+}
+
+.motorBtn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.motorBtn:hover {
+    background-color: #ddd;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
 }
